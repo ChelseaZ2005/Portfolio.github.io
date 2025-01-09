@@ -1,0 +1,115 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+    color: #f4c7d4; /* Light pink color */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+}
+
+#initial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 60%; /* 100% - 20% on each side = 60% */
+    margin: 0 auto;
+    text-align: center;
+}
+
+#startBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #f4c7d4; /* Light pink */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Emily Stylus', cursive; /* Cute font */
+}
+
+#startBtn:hover {
+    background-color: #e4b4c4; /* Slightly darker pink */
+}
+
+#timeline {
+    display: none;
+    padding: 40px;
+    text-align: center;
+    background-color: #000;
+}
+
+.timeline-section {
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+}
+
+.timeline-section h1, .timeline-section h2 {
+    color: #f4c7d4; /* Light pink color */
+    font-family: 'Emily Stylus', cursive; /* Cute font */
+}
+
+.proceed-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f4c7d4; /* Light pink */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Emily Stylus', cursive; /* Cute font */
+}
+
+.proceed-btn:hover {
+    background-color: #e4b4c4; /* Slightly darker pink */
+}
+
+.projects {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.projects h3 {
+    font-size: 20px;
+    color: #f4c7d4; /* Light pink color */
+    font-family: 'Emily Stylus', cursive; /* Cute font */
+}
+
+.projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects li {
+    margin: 10px 0;
+}
+
+.projects a {
+    text-decoration: none;
+    color: #f4c7d4; /* Light pink */
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif; /* Clean and readable font */
+}
+
+.projects a:hover {
+    text-decoration: underline;
+    color: #e4b4c4; /* Slightly darker pink */
+}
+
+footer {
+    background-color: #000;
+    color: #f4c7d4; /* Light pink */
+    padding: 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
