@@ -5,18 +5,21 @@ body {
     margin: 0;
     padding: 0;
     width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center; /* Centering content horizontally */
     align-items: center; /* Centering content vertically */
+    text-align: center; /* Centers text */
+    padding-top: 5%; /* Ensures no items in the top 10% of the screen */
+    padding-bottom: 10%; /* Ensures no items in the bottom 10% of the screen */
 }
 
 #initial {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    width: 60%; /* 100% - 20% on each side = 60% */
-    margin: 0 auto;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Limit maximum width */
     text-align: center;
 }
 
@@ -38,14 +41,17 @@ body {
 #timeline {
     display: none;
     padding: 40px;
-    text-align: center;
     background-color: #000;
+    width: 100%;
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto;
 }
 
 .timeline-section {
     display: none;
     animation: fadeIn 1s ease-in-out;
     width: 100%;
+    text-align: center;
 }
 
 .timeline-section h1, .timeline-section h2 {
@@ -69,24 +75,34 @@ body {
     background-color: #e4b4c4; /* Slightly darker pink */
 }
 
+/* Center images in a row */
 .projects {
-    margin-top: 30px;
-    text-align: left;
+    margin-top: 0; /* Reduced top margin */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-wrap: wrap; /* Allow wrapping of items if space is constrained */
+    gap: 10px; /* Reduced space between items */
 }
 
 .projects h3 {
     font-size: 20px;
     color: #f4c7d4; /* Light pink color */
     font-family: 'Emily Stylus', cursive; /* Cute font */
+    margin-bottom: 10px;
 }
 
 .projects ul {
     list-style-type: none;
     padding: 0;
+    text-align: left;
+    display: flex;
+    justify-content: center; /* Center the list items */
+    align-items: center;
 }
 
 .projects li {
-    margin: 10px 0;
+    margin: 8px 10px; /* Reduced margin for better spacing */
 }
 
 .projects a {
@@ -112,4 +128,42 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Centering images and videos in a horizontal row */
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    display: inline-block; /* Ensure images are in-line */
+    margin: 10px; /* Reduced margin for closer spacing */
+    object-fit: cover; /* Ensures images cover the area proportionally */
+}
+
+/* Styling for project items (if you use them in a row) */
+.project-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Align elements horizontally */
+    gap: 10px; /* Reduced gap between items */
+}
+
+.timeline-section {
+    display: block; /* Ensure the section is displayed */
+    animation: fadeIn 1s ease-in-out;
+    width: 100%;
+    text-align: center;
+    padding-top: 3%; /* Adds space at the top */
+    padding-bottom: 5%; /* Adds space at the bottom */
+    margin: 0 auto;
+}
+
+#timelineUniversity {
+    display: block; /* Ensure this specific section is shown */
+    margin-top: 5%; /* Adds margin above the section */
+    margin-bottom: 5%; /* Adds margin below the section */
+    padding: 20px;
+    max-width: 1200px; /* Restricts the width to a max value */
+    margin-left: auto;
+    margin-right: auto;
 }
