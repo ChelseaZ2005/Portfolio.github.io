@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CHAOS GAME - HTML5 + JS Fractal Drawing</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./libs/material/dist/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="./libs/material/dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./libs/material/dist/js/material.min.js"></script>
+    <script src="./libs/material/dist/js/ripples.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.2.0/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.0.4/wNumb.min.js"></script>
+    <script src="./js/sliders.js"></script>
+    <script src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class='container' id="wrap-content">
+      <div class="row" id='main-content'>
+        <div class="display col-md-8 col-md-push-4" id='fractal-container'>
+          <canvas id="fractal"></canvas>
+        </div>
+        <div class="controls col-md-4 col-md-pull-8">
+          <h3>Controls</h3>
+          <h4>Sides</h4>
+          <div class="slider-input row">
+            <div class="col-xs-3">
+              <input id='side-value' type='text'/>
+            </div>
+            <div class="col-xs-9">
+              <div class='slider shor slider-material-blue' id='side-slider'></div>
+            </div>
+          </div>
+          <h4>Iterations</h4>
+          <div class="slider-input row">
+            <div class="col-xs-3">
+              <input id='iteration-value' type='text'/>
+            </div>
+            <div class="col-xs-9">
+              <div class='slider shor slider-material-blue' id='iteration-slider'></div>
+            </div>
+          </div>
+          <h4>Vertex Exclusion</h4>
+          <div class="vertex-buttons btn-group btn-group-justified btn-group-raised">
+            <a href="javascript:void(0)" id='random' class="btn btn-primary btn-info">No</a>
+            <a href="javascript:void(0)" id='exclude-last' class="btn btn-primary">Last</a>
+            <a href="javascript:void(0)" id='exclude-next' class="btn btn-primary">Next</a>
+          </div>
+          <div class="vertex-buttons btn-group btn-group-justified btn-group-raised">
+            <a href="javascript:void(0)" id='exclude-skip' class="btn btn-primary">Skip</a>
+            <a href="javascript:void(0)" id='exclude-fringe' class="btn btn-primary">Fringe</a>
+            <a href="javascript:void(0)" id='exclude-distance' class="btn btn-primary">Distance</a>
+          </div>
+          <button type="button" id='start-stop-button' class="btn btn-lg btn-raised btn-info">GO!</button>
+          <div id='info'>
+            <h3>The Chaos Game</h3>
+            <p>
+              In mathematics, the term chaos game originally referred to a method of creating a fractal,
+              using a polygon and an initial point selected at random inside it.
+               The fractal is created by iteratively creating a sequence of points, starting with the initial random point,
+                in which each point in the sequence is a given fraction of the distance between the
+                previous point and one of the vertices of the polygon; the vertex is chosen at random in each iteration.
+                Repeating this iterative process a large number of times, selecting the vertex at random on each iteration,
+                and throwing out the first few points in the sequence, will often (but not always) produce a fractal shape.
+              <a href="https://en.wikipedia.org/wiki/Chaos_game">Read more about this</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
